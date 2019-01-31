@@ -31,9 +31,16 @@ class leecode_studyTests: XCTestCase {
         }
     }
     
-    func testSelectionSort() {
-        var inputs = ["dd", "b","cc"]
-        print(selectionSort(&inputs))
+    func testPerformanceSorts() {
+        var inputs = generateData(5000, min: 0, max: 10000)
+        var copyedInputs = inputs
+        let start = DispatchTime.now()
+        selectionSort(&inputs)
+        let stamp = DispatchTime.now()
+        bubbleSort(&copyedInputs)
+        let stamp1 = DispatchTime.now()
+        print("~~~Select sort", Double(stamp.uptimeNanoseconds-start.uptimeNanoseconds) / 1000000.0)
+        print("~~~bubble sort", Double(stamp1.uptimeNanoseconds-stamp.uptimeNanoseconds) / 1000000.0)
     }
 
 }

@@ -14,6 +14,7 @@
 		A54AF6EF220292E900D84628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54AF6ED220292E900D84628 /* LaunchScreen.storyboard */; };
 		A54AF6FA220292E900D84628 /* leecode_studyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AF6F9220292E900D84628 /* leecode_studyTests.swift */; };
 		A54AF7062202935300D84628 /* sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AF7052202935300D84628 /* sort.swift */; };
+		A54AF7082202DFAC00D84628 /* randData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AF7072202DFAC00D84628 /* randData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		A54AF6F9220292E900D84628 /* leecode_studyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leecode_studyTests.swift; sourceTree = "<group>"; };
 		A54AF6FB220292E900D84628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A54AF7052202935300D84628 /* sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sort.swift; sourceTree = "<group>"; };
+		A54AF7072202DFAC00D84628 /* randData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				A54AF7042202933C00D84628 /* sorting */,
 				A54AF6E4220292E800D84628 /* AppDelegate.swift */,
+				A54AF7072202DFAC00D84628 /* randData.swift */,
 				A54AF6E6220292E800D84628 /* ViewController.swift */,
 				A54AF6E8220292E800D84628 /* Main.storyboard */,
 				A54AF6EB220292E900D84628 /* Assets.xcassets */,
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A54AF7082202DFAC00D84628 /* randData.swift in Sources */,
 				A54AF6E7220292E800D84628 /* ViewController.swift in Sources */,
 				A54AF6E5220292E800D84628 /* AppDelegate.swift in Sources */,
 				A54AF7062202935300D84628 /* sort.swift in Sources */,
