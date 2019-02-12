@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18B8A89C943CDE0F456BE392 /* advanceSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8A54DBF79BEE1B4062994 /* advanceSort.swift */; };
+		18B8A8F4352E0CB95E1ABCDD /* MinHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8A9FD147C2872CC7B8E31 /* MinHeap.swift */; };
+		18B8AAD772AA90FFE76DBE72 /* BST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8A8265F8410C89AEC13E4 /* BST.swift */; };
+		A541EC26221151E4006F3A03 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A541EC25221151E4006F3A03 /* CustomView.swift */; };
 		A54AF6E5220292E800D84628 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AF6E4220292E800D84628 /* AppDelegate.swift */; };
 		A54AF6E7220292E800D84628 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AF6E6220292E800D84628 /* ViewController.swift */; };
 		A54AF6EA220292E800D84628 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54AF6E8220292E800D84628 /* Main.storyboard */; };
@@ -14,7 +18,7 @@
 		A54AF6EF220292E900D84628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54AF6ED220292E900D84628 /* LaunchScreen.storyboard */; };
 		A54AF6FA220292E900D84628 /* leecode_studyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AF6F9220292E900D84628 /* leecode_studyTests.swift */; };
 		A54AF7062202935300D84628 /* sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AF7052202935300D84628 /* sort.swift */; };
-		A54AF7082202DFAC00D84628 /* randData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AF7072202DFAC00D84628 /* randData.swift */; };
+		A54AF7082202DFAC00D84628 /* dataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AF7072202DFAC00D84628 /* dataHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18B8A54DBF79BEE1B4062994 /* advanceSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = advanceSort.swift; sourceTree = "<group>"; };
+		18B8A8265F8410C89AEC13E4 /* BST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BST.swift; sourceTree = "<group>"; };
+		18B8A9FD147C2872CC7B8E31 /* MinHeap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinHeap.swift; sourceTree = "<group>"; };
+		A541EC25221151E4006F3A03 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		A54AF6E1220292E800D84628 /* leecode-study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "leecode-study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A54AF6E4220292E800D84628 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A54AF6E6220292E800D84628 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,7 +47,7 @@
 		A54AF6F9220292E900D84628 /* leecode_studyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leecode_studyTests.swift; sourceTree = "<group>"; };
 		A54AF6FB220292E900D84628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A54AF7052202935300D84628 /* sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sort.swift; sourceTree = "<group>"; };
-		A54AF7072202DFAC00D84628 /* randData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randData.swift; sourceTree = "<group>"; };
+		A54AF7072202DFAC00D84628 /* dataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18B8A69CC91EE120A2F18302 /* dataStruct */ = {
+			isa = PBXGroup;
+			children = (
+				18B8A8265F8410C89AEC13E4 /* BST.swift */,
+				18B8A9FD147C2872CC7B8E31 /* MinHeap.swift */,
+			);
+			path = dataStruct;
+			sourceTree = "<group>";
+		};
 		A54AF6D8220292E700D84628 = {
 			isa = PBXGroup;
 			children = (
@@ -83,12 +100,14 @@
 			children = (
 				A54AF7042202933C00D84628 /* sorting */,
 				A54AF6E4220292E800D84628 /* AppDelegate.swift */,
-				A54AF7072202DFAC00D84628 /* randData.swift */,
+				A54AF7072202DFAC00D84628 /* dataHelper.swift */,
 				A54AF6E6220292E800D84628 /* ViewController.swift */,
+				A541EC25221151E4006F3A03 /* CustomView.swift */,
 				A54AF6E8220292E800D84628 /* Main.storyboard */,
 				A54AF6EB220292E900D84628 /* Assets.xcassets */,
 				A54AF6ED220292E900D84628 /* LaunchScreen.storyboard */,
 				A54AF6F0220292E900D84628 /* Info.plist */,
+				18B8A69CC91EE120A2F18302 /* dataStruct */,
 			);
 			path = "leecode-study";
 			sourceTree = "<group>";
@@ -106,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				A54AF7052202935300D84628 /* sort.swift */,
+				18B8A54DBF79BEE1B4062994 /* advanceSort.swift */,
 			);
 			path = sorting;
 			sourceTree = "<group>";
@@ -211,10 +231,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A54AF7082202DFAC00D84628 /* randData.swift in Sources */,
+				A54AF7082202DFAC00D84628 /* dataHelper.swift in Sources */,
+				A541EC26221151E4006F3A03 /* CustomView.swift in Sources */,
 				A54AF6E7220292E800D84628 /* ViewController.swift in Sources */,
 				A54AF6E5220292E800D84628 /* AppDelegate.swift in Sources */,
 				A54AF7062202935300D84628 /* sort.swift in Sources */,
+				18B8A89C943CDE0F456BE392 /* advanceSort.swift in Sources */,
+				18B8AAD772AA90FFE76DBE72 /* BST.swift in Sources */,
+				18B8A8F4352E0CB95E1ABCDD /* MinHeap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

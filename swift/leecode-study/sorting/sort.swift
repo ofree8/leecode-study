@@ -41,9 +41,18 @@ func selectionSort<T:Comparable>(_ input: inout [T]) {
     } while i < input.count-1
 }
 
-//func insertSort<T: Comparable>(_ input: inout [T]) {
-//    var i = 0
-//    while i < input.count {
-//        
-//    }
-//}
+func insertSort<T: Comparable>(_ input: inout [T]) {
+    var i = 1
+    var j: Int
+    var tempElem: T
+    while i < input.count {
+        tempElem = input[i]
+        j = i-1
+        while j >= 0 && tempElem < input[j] {
+            input[j+1] = input[j]
+            j -= 1
+        }
+        input[j+1] = tempElem
+        i += 1
+    }
+}
