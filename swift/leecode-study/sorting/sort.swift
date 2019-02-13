@@ -8,37 +8,35 @@
 
 import Foundation
 
-func bubbleSort<T: Comparable>(_ input: inout [T]) {
-    var i = input.count - 1
-    var j = 0
-    repeat {
+// 冒泡排序，用范型以后，性能下降接近十来倍，所以这种算法，最好避免范型
+func bubbleSort(_ input: inout [Int]) {
+    var i = input.count - 1, j = 0
+    while i >= 0 {
         while j < i {
-            if input[i] < input[j] {
+            if input[j] > input[j+1] {
+                (input[j], input[j+1]) = (input[j+1], input[j])
+            }
+            j += 1
+        }
+        j = 0
+        i -= 1
+    }
+}
+
+// 选择排序(避免范型)
+func selectionSort(_ input: inout [Int]) {
+    var i = 0, j = 0
+    let count = input.count
+    while i < count {
+        j = i+1
+        while j < count {
+            if input[j] < input[i] {
                 (input[i], input[j]) = (input[j], input[i])
             }
             j += 1
         }
-        i -= 1
-        j = 0
-    } while i > 0
-}
-
-func selectionSort<T:Comparable>(_ input: inout [T]) {
-    var tempMin: T
-    var i = 0, j = 0
-    
-    repeat {
-        tempMin = input[i]
-        j = i + 1
-        repeat {
-            if tempMin > input[j] {
-                tempMin = input[j]
-                (input[i], input[j]) = (input[j], input[i])
-            }
-            j += 1
-        } while j < input.count
         i += 1
-    } while i < input.count-1
+    }
 }
 
 func insertSort<T: Comparable>(_ input: inout [T]) {

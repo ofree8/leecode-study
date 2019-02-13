@@ -31,10 +31,26 @@ class leecode_studyTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+
+    func testBubbleSort() {
+        var inputs = generateData(5000, min: 0, max: 100)
+        var inputs1 = inputs
+        print("input count:", inputs.count)
+        let stamp = DispatchTime.now()
+        bubbleSort(&inputs)
+        let stamp1 = DispatchTime.now()
+        selectionSort(&inputs1)
+        let stamp2 = DispatchTime.now()
+        print("~~~bubble sort", (Double(stamp1.uptimeNanoseconds-stamp.uptimeNanoseconds) / 1000000000.0), "s")
+        print("~~~bubble sort 2", (Double(stamp2.uptimeNanoseconds-stamp1.uptimeNanoseconds) / 1000000000.0), "s")
+        print(isSorted(inputs, comparer: { (a, b) -> Bool in
+            return a <= b
+        }))
+    }
     
     func testPerformanceSorts() {
-//        var inputs = generateData(5000, min: 0, max: 100)
-        var inputs = generateNearlyOrderedData(5000, swap: 10)
+        var inputs = generateData(5000, min: 0, max: 100)
+//        var inputs = generateNearlyOrderedData(5000, swap: 10)
         var inputs1 = inputs
         var inputs2 = inputs
         var inputs3 = inputs

@@ -31,10 +31,8 @@ func generateNearlyOrderedData(_ count: Int, swap times: Int) -> [Int] {
 
 func isSorted(_ input: [Int], comparer: (Int, Int)->Bool ) -> Bool {
     for (index, _) in input.enumerated() {
-        if index+1 < input.count {
-            if !comparer(input[index], input[index+1]) {
-                return false
-            }
+        if index+1 < input.count && !comparer(input[index], input[index+1]) {
+            return false
         }
     }
     return true

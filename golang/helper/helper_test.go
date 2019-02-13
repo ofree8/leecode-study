@@ -12,8 +12,21 @@ func TestGenerateData(t *testing.T) {
 	t.Log(out)
 }
 
+func BenchmarkGenerateData(b *testing.B) {
+	for i:=0; i<b.N; i++ {
+		GenerateData(5000, 0, 100)
+	}
+}
+
+func BenchmarkGenerateNearlyOrderedData(b *testing.B) {
+	for i:=0; i<b.N; i++ {
+		GenerateNearlyOrderedData(5000, 100)
+	}
+}
+
 func TestGenerateNearlyOrderedData(t *testing.T) {
 	out := GenerateNearlyOrderedData(30, 2)
 	assert.Equal(t, len(out), 30, "count not equal")
 	t.Log(out)
 }
+
