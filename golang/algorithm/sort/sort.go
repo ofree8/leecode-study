@@ -36,13 +36,17 @@ func InsertSort(input []int) []int {
 
 // InsertSort1 插入排序优化版
 func InsertSort1(input []int) []int {
-	j := 0
-	for i := 1; i < len(input); i++ {
+	insertSort1(input, 0, len(input)-1)
+	return input
+}
+
+func insertSort1(input []int, left, right int) {
+	var j int
+	for i := left + 1; i <= right; i++ {
 		current := input[i]
-		for j = i; j > 0 && current < input[j-1]; j-- {
+		for j = i; j > left && current < input[j-1]; j-- {
 			input[j] = input[j-1]
 		}
 		input[j] = current
 	}
-	return input
 }

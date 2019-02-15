@@ -8,16 +8,11 @@
 
 import Foundation
 
-enum Beverage: CaseIterable {
-    case coffee, tea, juice
-}
-
-
-func mergeSort<T: Comparable>(_ input: inout [T]) {
+func mergeSort(_ input: inout [Int]) {
     mergeSortInternal(&input, left: 0, right: input.count-1)
 }
 
-func mergeSortInternal<T: Comparable>(_ input: inout [T], left: Int, right: Int) {
+func mergeSortInternal(_ input: inout [Int], left: Int, right: Int) {
     if right - left > 20 {
         insertSort(&input)
         return
@@ -32,7 +27,7 @@ func mergeSortInternal<T: Comparable>(_ input: inout [T], left: Int, right: Int)
 
 }
 
-func merge<T: Comparable>(_ input: inout [T], left: Int, middle: Int, right: Int) {
+func merge(_ input: inout [Int], left: Int, middle: Int, right: Int) {
     var tempArr = input
     var i = 0, j = 0,  k = middle+1
     while j <= middle && k <= right {

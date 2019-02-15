@@ -49,24 +49,29 @@ class leecode_studyTests: XCTestCase {
     }
     
     func testPerformanceSorts() {
-        var inputs = generateData(5000, min: 0, max: 100)
-//        var inputs = generateNearlyOrderedData(5000, swap: 10)
-        var inputs1 = inputs
-        var inputs2 = inputs
+//        var inputs = generateData(5000, min: 0, max: 100)
+        var inputs = generateNearlyOrderedData(20000, swap: 20)
+//        var inputs1 = inputs
+//        var inputs2 = inputs
         var inputs3 = inputs
-        let start = DispatchTime.now()
-        selectionSort(&inputs)
-        let stamp = DispatchTime.now()
-        bubbleSort(&inputs1)
-        let stamp1 = DispatchTime.now()
-        insertSort(&inputs2)
+        var inputs4 = inputs
+//        let start = DispatchTime.now()
+//        selectionSort(&inputs)
+//        let stamp = DispatchTime.now()
+//        bubbleSort(&inputs1)
+//        let stamp1 = DispatchTime.now()
+//        insertSort(&inputs2)
         let stamp2 = DispatchTime.now()
         mergeSort(&inputs3)
         let stamp3 = DispatchTime.now()
-        print("~~~Select sort", Double(stamp.uptimeNanoseconds-start.uptimeNanoseconds) / 1000000.0, "ms")
-        print("~~~bubble sort", Double(stamp1.uptimeNanoseconds-stamp.uptimeNanoseconds) / 1000000.0, "ms")
-        print("~~~insert sort", Double(stamp2.uptimeNanoseconds-stamp1.uptimeNanoseconds) / 1000000.0, "ms")
+        inputs4.sort()
+        let stamp4 = DispatchTime.now()
+//        print("~~~Select sort", Double(stamp.uptimeNanoseconds-start.uptimeNanoseconds) / 1000000.0, "ms")
+//        print("~~~bubble sort", Double(stamp1.uptimeNanoseconds-stamp.uptimeNanoseconds) / 1000000.0, "ms")
+//        print("~~~insert sort", Double(stamp2.uptimeNanoseconds-stamp1.uptimeNanoseconds) / 1000000.0, "ms")
         print("~~~merge sort", Double(stamp3.uptimeNanoseconds-stamp2.uptimeNanoseconds) / 1000000.0, "ms")
+        print("~~~system sort", Double(stamp4.uptimeNanoseconds-stamp3.uptimeNanoseconds) / 1000000.0, "ms")
+        print(inputs3 == inputs4)
     }
 
     func testBST() {
